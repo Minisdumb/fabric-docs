@@ -9,16 +9,16 @@ Basic items can only go so far - eventually you will need an item that interacts
 
 There are some key classes you must understand before taking a look at the vanilla item events.
 
-## InteractionResult {#interactionresult}
+## ActionResult {#actionresult}
 
-An `InteractionResult` tells the game the status of the event, whether it was passed/ignored, failed or successful.
+An `actionresult` tells the game the status of the event, whether it was passed/ignored, failed or successful.
 
 A successful interaction can also be used to transform the stack in hand.
 
 ```java
 ItemStack heldStack = user.getStackInHand(hand);
 heldStack.decrement(1);
-InteractionResult.SUCCESS.heldItemTransformedTo().success(heldStack);
+actionresult.SUCCESS.heldItemTransformedTo().success(heldStack);
 ```
 
 ## Overridable Events {#overridable-events}
